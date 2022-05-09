@@ -23,6 +23,7 @@ h2{
 /* header */
 
 header{
+  display:flex;
   width:970px;
   max-height: 300px;
   overflow: hidden;
@@ -34,19 +35,20 @@ header{
 .container{
   display:flex;
   flex-flow: row wrap;
+  justify-content: center;
 }
 header .logo{
-  line-height: 20px;
-  color: white;
+  line-height: 15px;
+  color: blue;
 }
 .logo>img{
-  padding: 15px 0 0 330px;
-  width: 300px;
+  padding: 15px 0 0 0px;
+  width: 350px;
   
 }
 .logo>h3{
   
-  padding: 0 0 0 445px;
+
   font-family: 'Open Sans', sans-serif;
   color: #00a997;
   font-size: 1em;
