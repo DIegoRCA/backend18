@@ -1,5 +1,6 @@
 var pool = require('./bd');
 var md5 = require('md5');
+
 const async = require('hbs/lib/async');
 
 async function getUser(usuario, password){
