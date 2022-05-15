@@ -41,18 +41,18 @@ router.post('/contacto', async (req, res) =>{
 
   const transport = nodemailer.createTransport({
     host: process.env.SMTP_HOST,
-    port: procces.env.SMTP_PORT,
+    port: process.env.SMTP_PORT,
     auth: {
       user: process.env.SMTP_USER,
       pass: process.env.SMTP_PASS
     }
   });
 
-  await transport.sendMail(mail)
+  transport.sendMail(mail)
 
   res.status(201).json({
     error: false,
-    message: 'Message send it'
+    message: 'Message sent'
   });
 });
 
