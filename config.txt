@@ -1,4 +1,0 @@
-DB name: 	heroku_7b3590e0c9b5eff
-Host: 		us-cdbr-east-05.cleardb.net
-Password: 	6bfb7702
-User: 		b2618559050fa0
