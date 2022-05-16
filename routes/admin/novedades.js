@@ -37,13 +37,13 @@ router.get('/', async function (req, res, next) {
     });
 });
 
-router.get('/agregar', (req,res,next)=>{
+router.get('/agregar', (req,res)=>{
   res.render('admin/agregar',{
     layout: 'admin/layout'
   });
 });
 
-router.post('/agregar', async (req,res,next)=>{
+router.post('/agregar', async (req,res)=>{
   try{
 
     var img_id = '';
@@ -74,7 +74,7 @@ router.post('/agregar', async (req,res,next)=>{
 });
 
 /*delete*/
-router.get('/eliminar/:id', async (req, res, next) =>{
+router.get('/eliminar/:id', async (req, res) =>{
     var id = req.params.id;
     let novedades = await novedadesModel.getNovedadById(id);
     if (novedades.img_id){
@@ -97,7 +97,7 @@ router.get('/modificar/:id', async (req, res)=> {
 });
 
 /*update*/
-router.post('/modificar', async (req,res,next)=>{
+router.post('/modificar', async (req,res)=>{
   try{
 
     let img_id = req.body.img_original;
