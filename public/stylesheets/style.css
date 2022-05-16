@@ -34,7 +34,8 @@ header{
 
 .container{
   display:flex;
-  flex-flow: row wrap;
+  flex-flow: row nowrap;
+  width: 970px;
   justify-content: center;
 }
 header .logo{
