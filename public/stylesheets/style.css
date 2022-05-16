@@ -34,7 +34,7 @@ header{
 
 .container{
   display:flex;
-  flex-flow: row nowrap;
+  flex-flow: row wrap;
   width: 970px;
   justify-content: center;
 }
