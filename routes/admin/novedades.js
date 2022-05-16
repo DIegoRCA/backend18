@@ -85,7 +85,7 @@ router.get('/eliminar/:id', async (req, res, next) =>{
 });
 
 /*para modificar > traer la novedad por id*/
-router.get('/modificar/:id', async (req, res, next)=> {
+router.get('/modificar/:id', async (req, res)=> {
   var id = req.params.id;
   //console.log(req.params.id);
   var novedades = await novedadesModel.getNovedadById(id);
