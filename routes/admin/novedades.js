@@ -76,9 +76,9 @@ router.post('/agregar', async (req,res,next)=>{
 /*delete*/
 router.get('/eliminar/:id', async (req, res, next) =>{
     var id = req.params.id;
-    let novedades = await novedadesModel.getNovedadById(id);
-    if (novedades.img_id){
-      await (destroy(novedades.img_id));
+    let novedad = await novedadesModel.getNovedadById(id);
+    if (novedad.img_id){
+      await (destroy(novedad.img_id));
     }
     await novedadesModel.deleteNovedadesById(id);
     res.redirect('/admin/novedades');
@@ -88,16 +88,16 @@ router.get('/eliminar/:id', async (req, res, next) =>{
 router.get('/modificar/:id', async (req, res, next)=> {
   var id = req.params.id;
   //console.log(req.params.id);
-  var novedades = await novedadesModel.getNovedadById(id);
+  var novedad = await novedadesModel.getNovedadById(id);
 
   res.render('admin/modificar' ,{
       layout: 'admin/layout',
-      novedades
+      novedad
   });
 });
 
 /*update*/
-router.post('/modificar', async (req,res,next)=>{
+router.post('/modificar', async (req,res, next)=>{
   try{
 
     let img_id = req.body.img_original;
